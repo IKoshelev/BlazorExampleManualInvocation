@@ -11,7 +11,8 @@ namespace BlazorExampleLoadLibraryOnly
 
         public void Configure(IComponentsApplicationBuilder app)
         {
-            app.AddComponent<App>("app");
+            // no visual components
+            //app.AddComponent<App>("app");
         }
     }
 }

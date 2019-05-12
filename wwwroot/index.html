@@ -5,12 +5,35 @@
     <meta name="viewport" content="width=device-width" />
     <title>BlazorExampleLoadLibraryOnly</title>
     <base href="/" />
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <app>Loading...</app>
-
+   
     <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+    
+    (function(){
+        // check if blazor.webassembly.js loaded once per seconf
+        var intervalHandle = setInterval(function(){
+
+            if(!DotNet){
+                return;
+            }
+
+            clearInterval(intervalHandle);
+
+            //BlazorExampleLoadLibraryOnly is the name of assembly, where method is found
+            var invocationResult  = DotNet.invokeMethod('BlazorExampleLoadLibraryOnly', 'ReturnArrayAsync');
+
+            console.log(invocationResult.result);
+
+            var invocationResult2 =  DotNet.invokeMethod('BlazorExampleLoadLibraryOnly', 'DecimalAdd', {a: 0.1, b: 0.2});
+
+            console.log("And 0.1 + 0.2 = " + invocationResult2.result);
+
+            debugger;
+        },1000);
+    })();
+    
+    </script>
 </body>
 </html>

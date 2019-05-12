@@ -1,1 +1,21 @@
-﻿<Router AppAssembly="typeof(Program).Assembly" />
+﻿
+@functions {
+    [JSInvokable]
+    public static Task<int[]> ReturnArrayAsync()
+    {
+        return Task.FromResult(new int[] { 1, 3, 5, 7, 11 });
+    }
+
+     [JSInvokable]
+    public static Task<decimal> DecimalAdd(AddVars toAdd)
+    {
+        return Task.FromResult(toAdd.a + toAdd.b);
+    }
+
+    public class AddVars
+    {
+        public decimal a;
+        public decimal b;
+    }
+
+}
