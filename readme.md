@@ -4,7 +4,7 @@
 You have some calculation logic (probably financial), you have to run it on the server (since you can never trust a client 100%), but you would also like to run an estimation on the client. You want to avoid code duplication, especially between different languages, so you want to run same code in both cases. 
 
 ### Solution
-This small project showcases how to run C# code compiled to WASM via Blazor project. In particular, it gets rid of any UI stuff and focuses on only loading the assemblies needed to invoke your methods from code. This code is adapted from one of the built-in samples of razor, look at commit history to see, what exactly was removed and added.
+This small project showcases how to run C# code compiled to WASM via Blazor project. In particular, it gets rid of any UI stuff and focuses on only loading the assemblies needed to invoke your methods from code. This code is adapted from one of the built-in samples of Blazor, look at commit history to see, what exactly was removed and added.
 
 ### How to run
 You will need .NET Core 3.0 SDK, Visual Studio Code https://code.visualstudio.com/docs/languages/dotnet .
