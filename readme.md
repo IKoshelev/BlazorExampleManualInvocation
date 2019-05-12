@@ -1,4 +1,4 @@
-# Example of using Blazor to execute C# algorithms  compiled to WASM in brrowser (without any UI)
+# Example of using Blazor to execute C# algorithms  compiled to WASM in browser (without any UI)
 
 ### Case
 You have some calculation logic (probably financial), you have to run it on the server (since you can never trust a client 100%), but you would also like to run an estimation on the client. You want to avoid code duplication, especially between different languages, so you want to run same code in both cases. 
